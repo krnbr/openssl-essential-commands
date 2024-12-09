@@ -1,0 +1,21 @@
+[ req ]
+distinguished_name = client_cert
+req_extensions = v3_req
+prompt = no
+
+[ client_cert ]
+C = IN
+ST = PUNJAB
+L = MOHALI
+O = Localhost
+OU = Localhost Systems Engineering
+CN = localhost
+
+[ v3_req ]
+basicConstraints        = critical, CA:FALSE
+subjectKeyIdentifier    = hash
+keyUsage                = critical, nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage        = critical, clientAuth
+
+[ v3_ca ]
+basicConstraints = critical,CA:FALSE

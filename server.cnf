@@ -1,0 +1,21 @@
+[req]
+distinguished_name = server
+req_extensions = v3_req
+prompt = no
+
+[server]
+C = IN
+ST = PUNJAB
+L = MOHALI
+O = Localhost
+OU = Localhost API Engineering
+CN = localhost
+
+[v3_req]
+keyUsage = critical, keyAgreement, digitalSignature, keyEncipherment
+# serverAuth = when the certificate is meant for a server only.
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = localhost
